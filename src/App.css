@@ -1,10 +1,100 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
 }
 
-img {
-  max-width: 250px;
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: green;
+  font-size: 96px;
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-size: 2em;
+}
+
+h3 {
+  font-family: "Caveat", cursive;
+  font-size: 2em;
+}
+
+li {
+  background-color: rgb(243, 62, 62);
+  border-radius: 15px;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.image {
+  grid-area: image1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+/* Animals list */
+
+.animals-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.animals-text {
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.animals-hungry {
+  color: rgb(64, 83, 203);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+
+  30% {
+    transform: scale(1, 0.8) translate(0px, 10px);
+  }
+
+  75% {
+    transform: scale(1, 1.1) translate(0px, -25px);
+  }
+
+  100% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+}
+
+.danger-button {
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 50px;
+  width: 150px;
+
+  background: rgb(250, 59, 25);
+  animation: bounce 0.75s infinite;
 }
