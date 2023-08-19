@@ -1,13 +1,24 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { getAnimals } from "./services/animalService";
+import { getAnimalById, getAnimals } from "./services/animalService";
 import { Animals } from "./views/Animals";
+import { Animal } from "./views/Animal";
 
 const router = createBrowserRouter([
   {
     path: "/",
     loader: getAnimals,
     Component: Animals,
+  },
+  {
+    path: "/animal/:id",
+    loader: async ({ params }) => {
+      if (!params.id) {
+        throw new Error();
+      }
+      return getAnimalById(params.id);
+    },
+    Component: Animal,
   },
 ]);
 
