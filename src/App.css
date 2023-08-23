@@ -1,42 +1,147 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+  color: rgb(54, 83, 53);
+  font-size: 96px;
+  margin: 0;
 }
 
-.card {
-  padding: 2em;
+h2 {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-size: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+h3 {
+  font-family: "Caveat", cursive;
+  font-size: 2em;
+}
+
+p {
+  line-height: 25px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  background-color: white;
+}
+
+.image {
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+/* header start */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+span {
+  color: #4c755a;
+}
+/* Animals list */
+
+.animals-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.animals-description {
+  padding: 5px;
+}
+
+.animals-hungry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  gap: 7px;
+  background-color: rgb(54, 83, 53);
+  border-radius: 0 0 15px 15px;
+}
+
+.animals-hungry-text {
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.animals-hungry-text:hover {
+  color: rgb(217, 219, 216);
+}
+
+.animals-hungry-icon {
+  margin-left: 0.5em;
+  color: rgb(255, 253, 255);
+}
+
+/* Animal page start */
+
+.animal-container {
+  max-width: 800px;
+  padding-bottom: 100px;
+  margin: auto;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+.animal-description-container {
+  padding: 10px;
+}
+
+.notFed {
+  height: 50px;
+  width: 150px;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: rgb(61, 93, 60);
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  outline: none;
+  transition: 0.2s all;
+}
+
+.notFed:hover {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
