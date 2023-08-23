@@ -2,6 +2,14 @@
   margin: 0;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 a {
@@ -9,10 +17,9 @@ a {
 }
 
 h1 {
-  color: green;
+  color: rgb(54, 83, 53);
   font-size: 96px;
   margin: 0;
-  padding-bottom: 100px;
 }
 
 h2 {
@@ -26,75 +33,115 @@ h3 {
   font-size: 2em;
 }
 
-li {
-  background-color: rgb(243, 62, 62);
-  border-radius: 15px;
+p {
+  line-height: 25px;
 }
 
-body {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  font-family: "Nanum Gothic", sans-serif;
+li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  background-color: white;
 }
 
 .image {
-  grid-area: image1;
   max-width: 100%;
-  height: auto;
+  max-height: auto;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 
+/* header start */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+span {
+  color: #4c755a;
+}
 /* Animals list */
 
 .animals-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
   gap: 25px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
-.animals-text {
+.animals-description {
   padding: 5px;
-  border-radius: 15px;
 }
 
-.animals-hungry {
-  color: rgb(64, 83, 203);
+.animals-hungry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  gap: 7px;
+  background-color: rgb(54, 83, 53);
+  border-radius: 0 0 15px 15px;
 }
 
-@keyframes bounce {
-  0% {
-    transform: scale(1, 1) translate(0px, 0px);
-  }
-
-  30% {
-    transform: scale(1, 0.8) translate(0px, 10px);
-  }
-
-  75% {
-    transform: scale(1, 1.1) translate(0px, -25px);
-  }
-
-  100% {
-    transform: scale(1, 1) translate(0px, 0px);
-  }
-}
-
-.danger-button {
-  text-align: center;
+.animals-hungry-text {
   color: white;
-  margin: 0 auto;
-  margin-top: 100px;
+  padding: 10px;
+  width: 100%;
+}
+
+.animals-hungry-text:hover {
+  color: rgb(217, 219, 216);
+}
+
+.animals-hungry-icon {
+  margin-left: 0.5em;
+  color: rgb(255, 253, 255);
+}
+
+/* Animal page start */
+
+.animal-container {
+  max-width: 800px;
+  padding-bottom: 100px;
+  margin: auto;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+}
+.animal-description-container {
+  padding: 10px;
+}
+
+.notFed {
   height: 50px;
   width: 150px;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: rgb(61, 93, 60);
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  outline: none;
+  transition: 0.2s all;
+}
 
-  background: rgb(250, 59, 25);
-  animation: bounce 0.75s infinite;
+.notFed:hover {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
