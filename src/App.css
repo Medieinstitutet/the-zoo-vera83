@@ -58,7 +58,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
   margin-bottom: 100px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
 .nav-buttons {
@@ -118,18 +120,18 @@ span {
   box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
 }
 .animal-description-container {
-  padding: 10px;
+  padding: 20px;
+  text-align: left;
 }
 
 .notFed {
-  height: 50px;
-  width: 150px;
   color: white;
   text-align: center;
   font-size: 17px;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 50px;
+  padding: 15px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
@@ -137,6 +139,19 @@ span {
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
   outline: none;
   transition: 0.2s all;
+}
+
+.disabled-button {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ccc;
+  box-shadow: inset;
+  color: #888; /* Set the text color */
+  cursor: not-allowed; /* Change cursor on hover */
+  /* Add any other styling you want for a disabled button */
 }
 
 .notFed:hover {

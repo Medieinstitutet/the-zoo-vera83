@@ -30,13 +30,16 @@ export const Animal = () => {
           <p className="animal-description">{animal.longDescription}</p>
         </div>
         <p>
+          •{" "}
           <strong>{`Senast matad: ${animal.lastFed.toLocaleString()}`} </strong>
         </p>
-        {!animal.isFed && (
-          <button className="notFed" onClick={feedAnimal}>
-            Mata {animal.name}!
-          </button>
-        )}
+        <button
+          className={`button ${animal.isFed ? "disabled-button" : "notFed"}`}
+          disabled={animal.isFed}
+          onClick={feedAnimal}
+        >
+          Mata {animal.name}!
+        </button>
       </div>
     </>
   );
